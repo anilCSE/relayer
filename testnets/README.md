@@ -30,7 +30,7 @@ echo 'export GOPATH=$HOME/go' >> ~/.profile
 echo 'export GOBIN=$GOPATH/bin' >> ~/.profile
 echo 'export PATH=$PATH:/usr/local/go/bin:$GOBIN' >> ~/.profile
 echo "export GAIA=\$GOPATH/src/github.com/cosmos/gaia" >> ~/.profile
-echo "export RELAYER=\$GOPATH/src/github.com/iqlusioninc/relayer" >> ~/.profile
+echo "export RELAYER=\$GOPATH/src/github.com/anilCSE/relayer" >> ~/.profile
 source ~/.profile
 
 # Set these variables to different values that are specific to your chain
@@ -42,7 +42,7 @@ export RLYKEY=faucet
 
 # Start by downloading and installing both gaia and the relayer
 mkdir -p $(dirname $GAIA) && git clone https://github.com/cosmos/gaia $GAIA && cd $GAIA && git checkout ibc-alpha && make install
-mkdir -p $(dirname $RELAYER) && git clone https://github.com/iqlusioninc/relayer $RELAYER && cd $RELAYER && make install
+mkdir -p $(dirname $RELAYER) && git clone https://github.com/anilCSE/relayer $RELAYER && cd $RELAYER && git checkout anilCSE-patch-3 && make install
 
 # Now its time to configure both the relayer and gaia, start with the relayer
 cd
